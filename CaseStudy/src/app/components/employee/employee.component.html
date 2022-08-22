@@ -1,0 +1,14 @@
+<div>
+  <p *ngFor="let e of empArray"> Employee Id : {{ e.empId }}
+    <a routerLink="/employee/{{e.empId}}">Details&nbsp;&nbsp;&nbsp;</a>
+    <button (click)="delEmployee()">Delete</button>
+  </p>
+</div>
+<hr>
+<router-outlet></router-outlet>
+<hr>
+<div>
+  <button (click)="addEmployee()">Add Employee</button>
+</div>
+<p *ngIf="submitted">Employess Added Successfully....</p>
+<p *ngIf="deleted">Employess Deleted Successfully....</p>
